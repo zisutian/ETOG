@@ -4,7 +4,7 @@ from typing import List, Union
 import cv2
 import lmdb
 import numpy as np
-import pyarrow as pa
+import pickle
 import torch
 from torch.utils.data import Dataset
 from scipy.ndimage.morphology import binary_dilation
@@ -88,7 +88,7 @@ def loads_pyarrow(buf):
     Args:
         buf: the output of `dumps`.
     """
-    return pa.deserialize(buf)
+    return pickle.loads(buf)
 
 def overlay_davis(image, mask, colors=[[0, 0, 0], [255, 0, 0]], cscale=1, alpha=0.4):
 

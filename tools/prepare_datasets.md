@@ -47,7 +47,7 @@ The data could be found at [here](https://github.com/lichengunc/refer). Please r
 
 ```shell
 # download
-wget https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco+.zip
+wget https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco+.zip --no-check-certificate
 
 # unzip
 unzip refcoco+.zip && rm refcoco+.zip
@@ -141,3 +141,5 @@ datasets
 │   │   ├── xxx.png
 
 ```
+
+
